@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CV Online Rejeki Adi Putra Lumban Batu - Desainer SolidWorks profesional.">
+    <meta name="keywords" content="CV, Desainer, SolidWorks, Rejeki Adi Putra, Lumban Batu, CAD, 3D modeling">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Online - Rejeki Adi Putra Lumban Batu</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --light-text: #6b7280;
+            --background: #f9fafb;
+            --card-bg: #ffffff;
+            --accent: #3b82f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 100px 0 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><polygon fill="rgba(255,255,255,0.08)" points="0,100 100,0 100,100"/></svg>');
+            background-size: cover;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            object-fit: cover;
+            background-color: #e5e7eb;
+        }
+
+        .header-text h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .header-text h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .contact-btn {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Main Content */
+        main {
+            padding: 60px 0;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* About Section */
+        .about-content {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Experience and Education */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .timeline-item {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -38px;
+            top: 10px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: white;
+            border: 3px solid var(--primary-color);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-bottom: 5px;
+        }
+
+        .timeline-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        .timeline-subtitle {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .timeline-content {
+            font-size: 0.95rem;
+            color: var(--light-text);
+        }
+
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .skill-category h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-list li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-right: 5px;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            height: 180px;
+            background-color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+            font-weight: 500;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .project-description {
+            font-size: 0.95rem;
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .project-tag {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--primary-color);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background-color: white;
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Navigation */
+        .nav-container {
+            background-color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-text h1 {
+                font-size: 2rem;
+            }
+            
+            .header-text h2 {
+                font-size: 1.2rem;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: white;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">R.A.P.L.B</a>
+                <button class="mobile-menu-btn">☰</button>
+                <ul class="nav-links">
+                    <li><a href="#tentang">Tentang</a></li>
+                    <li><a href="#pengalaman">Pengalaman</a></li>
+                    <li><a href="#pendidikan">Pendidikan</a></li>
+                    <li><a href="#keahlian">Keahlian</a></li>
+                    <li><a href="#proyek">Proyek</a></li>
+                    <li><a href="#sertifikat">Sertifikat</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="jek.jpg" alt="Foto Profil" class="profile-image">
+                <div class="header-text">
+                    <h1>Rejeki Adi Putra Lumban Batu</h1>
+                    <h2>Desainer Solidworks</h2>
+                    <p>Saya adalah seorang desainer SolidWorks yang detail-oriented dan berorientasi solusi, dengan pengalaman merancang komponen mekanik dan sistem 3D yang presisi dan efisien. Saya memiliki kemampuan untuk mengubah ide menjadi desain fungsional dengan memperhatikan aspek fungsionalitas, manufaktur, dan estetika.</p>
+                    
+                    <div class="contact-buttons">
+                        <a href="mailto:rejekilumbanbatu3@gmail.com" class="contact-btn">
+                            <span>&#9993;</span> Email
+                        </a>
+                        <a href="tel:+6281368101809" class="contact-btn">
+                            <span>&#9742;</span> Telepon
+                        </a>
+                        <a href="https://wa.me/6281368101809" class="contact-btn">
+                            <span>&#128172;</span> WhatsApp
+                        </a>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- About Section -->
+        <section id="tentang">
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="about-content">
+                <p>Saya adalah seorang desainer SolidWorks profesional dengan pengalaman komprehensif dalam perancangan produk dan komponen teknis. Dengan latar belakang pendidikan di bidang Teknologi Komputer dari Institut Teknologi Del, saya telah mengembangkan keahlian dalam pemodelan 3D, desain mekanik, dan analisis teknis.</p>
+                <p>Dalam perjalanan karir saya, saya telah berhasil menyelesaikan berbagai proyek desain yang kompleks, dari konsep awal hingga dokumentasi teknis yang siap produksi. Saya memiliki passion dalam inovasi desain dan selalu berusaha untuk menghasilkan solusi yang tidak hanya fungsional tetapi juga efisien dari segi manufaktur.</p>
+                <p>Saya percaya bahwa desain yang baik harus memperhatikan aspek kegunaan, ketahanan, dan kemudahan produksi. Dalam setiap proyek, saya selalu mengutamakan ketelitian, efisiensi, dan komunikasi yang jelas dengan semua stakeholder.</p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="pengalaman">
+            <h2 class="section-title">Pengalaman Kerja</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Jan 2023 - Sekarang</div>
+                    <h3 class="timeline-title">Senior SolidWorks Designer</h3>
+                    <div class="timeline-subtitle">PT Teknik Presisi Indonesia</div>
+                    <div class="timeline-content">
+                        <p>Bertanggung jawab untuk memimpin tim desain dalam pengembangan produk baru dan perbaikan produk yang sudah ada dengan menggunakan SolidWorks.</p>
+                        <ul>
+                            <li>Mengoptimalkan desain komponen mekanik yang menghasilkan pengurangan biaya material sebesar 15%</li>
+                            <li>Mengimplementasikan sistem PDM (Product Data Management) yang meningkatkan efisiensi kolaborasi tim sebesar 30%</li>
+                            <li>Mendesain 5 produk baru yang berhasil dipasarkan dan mendapatkan feedback positif dari pelanggan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Mar 2020 - Des 2022</div>
+                    <h3 class="timeline-title">CAD Designer</h3>
+                    <div class="timeline-subtitle">CV Mekatronika Jaya</div>
+                    <div class="timeline-content">
+                        <p>Merancang komponen-komponen mekanik dan assembly untuk berbagai kebutuhan industri dengan fokus pada efisiensi dan ketahanan.</p>
+                        <ul>
+                            <li>Membuat lebih dari 200 model 3D komponen mekanik yang diimplementasikan dalam produk final</li>
+                            <li>Mengurangi waktu perancangan sebesar 25% dengan mengembangkan template dan library komponen yang dapat digunakan ulang</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Jan 2018 - Feb 2020</div>
+                    <h3 class="timeline-title">Junior Designer</h3>
+                    <div class="timeline-subtitle">PT Engineering Solusi</div>
+                    <div class="timeline-content">
+                        <p>Bekerja di bawah bimbingan senior designer untuk mengembangkan desain komponen mekanik dan melakukan revisi teknis berdasarkan feedback dari tim produksi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="pendidikan">
+            <h2 class="section-title">Pendidikan</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2014 - 2018</div>
+                    <h3 class="timeline-title">D3 Teknologi Komputer</h3>
+                    <div class="timeline-subtitle">IT DEL</div>
+                    <div class="timeline-content">
+                        <p>IPK: 3.8/4.0</p>
+                        <p>Fokus studi: Perancangan sistem komputer dan aplikasi teknikal</p>
+                        <p>Aktivitas kampus: Anggota aktif klub robotika dan kompetisi desain teknik</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">2011 - 2014</div>
+                    <h3 class="timeline-title">SMA</h3>
+                    <div class="timeline-subtitle">SMA Negeri 1 Sijamapolang</div>
+                    <div class="timeline-content">
+                        <p>Jurusan: IPA</p>
+                        <p>Prestasi: Masuk dalam 10 besar lulusan terbaik dengan keunggulan di bidang matematika dan fisika</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="keahlian">
+            <h2 class="section-title">Keahlian</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Teknis</h3>
+                    <ul class="skill-list">
+                        <li>SolidWorks (Expert)</li>
+                        <li>AutoCAD</li>
+                        <li>Finite Element Analysis</li>
+                        <li>Desain Mekanik</li>
+                        <li>Simulasi Pergerakan</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>Komunikasi Teknis</li>
+                        <li>Kerja Tim</li>
+                        <li>Manajemen Proyek</li>
+                        <li>Problem Solving</li>
+                        <li>Pemikiran Analitis</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Bahasa</h3>
+                    <ul class="skill-list">
+                        <li>Bahasa Indonesia (Native)</li>
+                        <li>Bahasa Inggris (Profesional)</li>
+                        <li>Bahasa Batak (Native)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Tools & Software</h3>
+                    <ul class="skill-list">
+                        <li>PDM Software</li>
+                        <li>Microsoft Office Suite</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Fusion 360</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="proyek">
+            <h2 class="section-title">Proyek</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">Sistem Conveyor Otomatis</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Sistem Conveyor Otomatis</h3>
+                        <p class="project-description">Merancang sistem conveyor otomatis untuk industri manufaktur dengan fokus pada efisiensi energi dan kemudahan perawatan. Proyek ini berhasil meningkatkan throughput produksi sebesar 40%.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">SolidWorks</span>
+                            <span class="project-tag">Otomasi</span>
+                            <span class="project-tag">Desain Mekanik</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">Komponen Mesin Pengemasan</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Komponen Mesin Pengemasan</h3>
+                        <p class="project-description">Mendesain ulang komponen-komponen kritis mesin pengemasan untuk meningkatkan daya tahan dan mengurangi waktu downtime. Hasil redesign mengurangi kegagalan komponen sebesar 75%.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Redesign</span>
+                            <span class="project-tag">Optimasi</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">Fixture Kustom untuk Produksi</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Fixture Kustom untuk Produksi</h3>
+                        <p class="project-description">Merancang dan mengembangkan fixture khusus untuk meningkatkan akurasi dan kecepatan dalam proses produksi. Implementasi desain ini mengurangi waktu setup sebesar 60%.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Fixture</span>
+                            <span class="project-tag">Manufaktur</span>
+                            <span class="project-tag">Efisiensi</span>
+                            <span class="project-tag">Presisi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sertifikat Section -->
+        <section id="sertifikat">
+            <h2 class="section-title">Sertifikat & Pelatihan</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Nov 2023</div>
+                    <h3 class="timeline-title">CSWA - Certified SolidWorks Associate</h3>
+                    <div class="timeline-subtitle">Dassault Systèmes</div>
+                    <div class="timeline-content">
+                        <p>Sertifikasi yang memvalidasi keahlian dasar dalam penggunaan SolidWorks untuk pemodelan 3D.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-date">Apr 2022</div>
+                    <h3 class="timeline-title">CSWP - Certified SolidWorks Professional</h3>
+                    <div class="timeline-subtitle">Dassault Systèmes</div>
+                    <div class="timeline-content">
+                        <p>Sertifikasi tingkat lanjut yang menunjukkan kemampuan untuk menyelesaikan tugas-tugas kompleks menggunakan SolidWorks.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Jun 2021</div>
+                    <h3 class="timeline-title">Product Design for Manufacturing</h3>
+                    <div class="timeline-subtitle">Indonesia Design Institute</div>
+                    <div class="timeline-content">
+                        <p>Pelatihan intensif tentang perancangan produk yang mempertimbangkan aspek manufaktur dan efisiensi produksi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>Tertarik untuk berkolaborasi atau memiliki pertanyaan? Jangan ragu untuk menghubungi saya!</p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/" target="_blank" class="social-link">LI</a>
+                <a href="https://github.com/" target="_blank" class="social-link">GH</a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-link">IG</a>
+                <a href="https://www.facebook.com/" target="_blank" class="social-link">FB</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Rejeki Adi Putra Lumban Batu</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling untuk navigasi
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if(mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Scroll event untuk navigasi sticky
+            window.addEventListener('scroll', function() {
+                const nav = document.querySelector('.nav-container');
+                if (window.scrollY > 50) {
+                    nav.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+                } else {
+                    nav.style.boxShadow = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
